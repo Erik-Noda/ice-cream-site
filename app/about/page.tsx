@@ -1,5 +1,11 @@
+import HeaderGlobal from '../components/Header'
+
 const Sobre = () => {
-    return <div className="bg-primary-300 h-screen">Sobre</div>
+    return (
+        <main className="bg-primary-200 h-screen">
+            <HeaderGlobal />
+        </main>
+    )
 }
 
 export default Sobre

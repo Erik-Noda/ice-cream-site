@@ -3,10 +3,10 @@ import HeaderGlobal from './components/Header'
 
 export default function Home() {
     return (
-        <main className="bg-primary-200 h-screen">
+        <main className="bg-primary-200 h-screen overflow-auto">
             <HeaderGlobal />
-            <div className="container mx-auto p-4 pt-6 z-10">
-                <div className="relative flex justify-end mr-[-40px] mt-10">
+            <div className="container mx-auto p-4  z-10 pt-56">
+                <div className="relative flex justify-end mt-10">
                     <div className="flex absolute flex-col text-white  top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-44  justify-center items-center z-20">
                         <h5 className="text-lg sm:text-3xl font-fredoka">
                             Welcome to:
@@ -16,47 +16,63 @@ export default function Home() {
                                 Mr.Frozen
                             </h2>
                         </div>
+                        <div className=" flex w-2/3 flex-col mt-10 sm:flex-row justify-center items-center gap-5 ">
+                            <button className="transition-colors ease-in-out duration-300 bg-primary-500 font-fredoka px-4 py-2 rounded-md sm:text-3xl hover:text-primary-300 hover:bg-white">
+                                Menu
+                            </button>
+                            <button className="transition-colors ease-in-out duration-300 bg-primary-500 font-fredoka px-4 py-2 rounded-md sm:text-3xl hover:text-primary-300 hover:bg-white">
+                                About
+                            </button>
+                        </div>
                     </div>
-                    <div className="w-300 h-100 sm:w-400 sm:w-150 rotate-[20deg] justify-self-end z-10">
+                    <div className=" relative h-[350px] w-[150px] sm:h-[450px] sm:w-[200px] md:h-[600px] md:w-[250px] z-10 rotate-[15deg] mr-14 sm:mr-32">
                         <Image
                             src="/cone.png"
                             alt="cone"
-                            width={400}
-                            height={200}
+                            fill
+                            className="object-cover "
                         />
                     </div>
-                </div>
-                <div className="absolute top-60 right-20 sm:right-44 w-60 h-60 rounded-3xl rotate-[60deg] bg-primary-400" />
-                <div className="absolute bottom-0 left-0 w-full overflow-hidden">
-                    <svg
-                        data-name="Layer 1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 1200 120"
-                        preserveAspectRatio="none"
-                        className="relative block h-[192px] "
-                    >
-                        <path
-                            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-                            className="fill-[#7AA2E3]"
-                        ></path>
-                    </svg>
-                </div>
-                <div className="absolute bottom-[-180px] left-0 w-full overflow-hidden">
-                    <svg
-                        data-name="Layer 1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 1200 120"
-                        preserveAspectRatio="none"
-                        className="relative block h-[192px] rotate-180 "
-                    >
-                        <path
-                            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-                            className="fill-[#7AA2E3]"
-                        ></path>
-                    </svg>
+                    <div className="absolute top-40 right-20 sm:right-48 w-36 h-36 sm:w-96 sm:h-96 rounded-3xl rotate-[60deg] bg-primary-400 z-0" />
                 </div>
             </div>
-            <div className="h-screen bg-primary-200 w-screen"></div>
+
+            <div className="flex justify-center items-center flex-col bg-primary-200 mt-80 gap-10">
+                <div className="flex relative items-center h-44 bg-red-400 w-10/12 rounded-xl">
+                    <h2 className="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-fredoka text-2xl bg-primary-300 rounded-md p-2">
+                        Milkshakes
+                    </h2>
+                    <Image
+                        src="/milkshake.jpg"
+                        alt="milkshake"
+                        className="object-cover rounded-xl"
+                        fill
+                    />
+                </div>
+                <div className="flex relative items-center h-44 bg-red-400 w-10/12 rounded-xl">
+                    <h2 className="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-fredoka text-2xl bg-primary-300 rounded-md p-2">
+                        Cups
+                    </h2>
+                    <Image
+                        src="/hands.jpg"
+                        alt="milkshake"
+                        className="object-cover rounded-xl"
+                        fill
+                    />
+                </div>
+                <div className="flex relative items-center h-44 bg-red-400 w-10/12 rounded-xl">
+                    <h2 className="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-fredoka text-2xl bg-primary-300 rounded-md p-2">
+                        Cone
+                    </h2>
+                    <Image
+                        src="/cupsCone.jpg"
+                        alt="milkshake"
+                        className="object-cover rounded-xl"
+                        fill
+                    />
+                </div>
+            </div>
+            <div className="flex justify-center items-center flex-col bg-primary-200 mt-80 gap-10"></div>
         </main>
     )
 }

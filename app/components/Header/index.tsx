@@ -8,8 +8,15 @@ const HeaderGlobal = () => {
     const [openMenu, setOpenMenu] = useState<boolean>(false)
     return (
         <>
-            <header className="fixed flex bg-primary-200 justify-between items-center flex-row w-screen z-40 ">
-                <Image src="/icon.png" alt="icon" width={100} height={100} />
+            <header className="fixed flex bg-primary-200 justify-between items-center flex-row w-screen z-40 h-20 ">
+                <Link href="/">
+                    <Image
+                        src="/icon.png"
+                        alt="icon"
+                        width={100}
+                        height={100}
+                    />
+                </Link>
                 <button
                     onClick={() => {
                         setOpenMenu(!openMenu)

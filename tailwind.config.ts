@@ -18,7 +18,8 @@ const config: Config = {
                     100: '#F8F6E3',
                     200: '#97E7e1',
                     300: '#6AD4DD',
-                    400: '#7AA2E3'
+                    400: '#7AA2E3',
+                    500: '#C68FE6'
                 }
             },
             fontFamily: {

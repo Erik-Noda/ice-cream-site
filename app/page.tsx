@@ -1,11 +1,20 @@
 import Image from 'next/image'
 import HeaderGlobal from './components/Header'
+import Carousel from './components/Carousel.js'
 
 export default function Home() {
+    const slides = [
+        { img: '/balls1.png', flavor: 'Morango' },
+        { img: '/balls2.png', flavor: 'Chocolate' },
+        { img: '/balls3.png', flavor: 'Mirtilo' },
+        { img: '/balls4.png', flavor: 'Baunilha' },
+        { img: '/balls5.png', flavor: 'Pistache' }
+    ]
+
     return (
         <main className="bg-primary-200 h-screen overflow-auto">
             <HeaderGlobal />
-            <div className="container mx-auto p-4  z-10 pt-56">
+            <div className="container mx-auto p-4  z-10 pt-60 sm:pt-36 ">
                 <div className="relative flex justify-end mt-10">
                     <div className="flex absolute flex-col text-white  top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-44  justify-center items-center z-20">
                         <h5 className="text-lg sm:text-3xl font-fredoka">
@@ -37,8 +46,8 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="flex justify-center items-center flex-col bg-primary-200 mt-80 gap-10">
-                <div className="flex relative items-center h-44 bg-red-400 w-10/12 rounded-xl">
+            <div className="h-[60%] flex justify-center items-center flex-col sm:flex-row sm: px-10 bg-primary-200 mt-80 gap-10">
+                <div className="flex relative items-center h-44 sm:h-96 bg-red-400 w-10/12 sm:w-3/4 rounded-xl">
                     <h2 className="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-fredoka text-2xl bg-primary-300 rounded-md p-2">
                         Milkshakes
                     </h2>
@@ -49,7 +58,7 @@ export default function Home() {
                         fill
                     />
                 </div>
-                <div className="flex relative items-center h-44 bg-red-400 w-10/12 rounded-xl">
+                <div className="flex relative items-center h-44 sm:h-96 bg-red-400 w-10/12 sm:w-3/4  rounded-xl">
                     <h2 className="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-fredoka text-2xl bg-primary-300 rounded-md p-2">
                         Cups
                     </h2>
@@ -60,9 +69,9 @@ export default function Home() {
                         fill
                     />
                 </div>
-                <div className="flex relative items-center h-44 bg-red-400 w-10/12 rounded-xl">
+                <div className="flex relative items-center h-44 sm:h-96 bg-red-400 w-10/12 sm:w-3/4  rounded-xl">
                     <h2 className="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-fredoka text-2xl bg-primary-300 rounded-md p-2">
-                        Cone
+                        Cones
                     </h2>
                     <Image
                         src="/cupsCone.jpg"
@@ -72,7 +81,15 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <div className="flex justify-center items-center flex-col bg-primary-200 mt-80 gap-10"></div>
+            <div className="h-[60%] flex justify-center items-center flex-col bg-primary-200 my-44 gap-10 w-[98vw]">
+                <h2 className="text-xl font-fredoka text-center text-primary-400">
+                    Ice Cream Tastes
+                </h2>
+                <h2 className="text-2xl font-fredoka text-center text-primary-400">
+                    From strawberry to coconut, we have them all!
+                </h2>
+                <Carousel slides={slides} />
+            </div>
         </main>
     )
 }
